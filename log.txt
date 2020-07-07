@@ -10,3 +10,173 @@ Language: English, Spanish
 Movie plot: In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.
 Actors: Al Pacino, Steven Bauer, Michelle Pfeiffer, Mary Elizabeth Mastrantonio
 =======================================================================================================
+==========================================================================
+liri command: spotify-this-song
+Top 10 songs on Spotify with the name, Freedom
+==========================================================================
+Song #1
+Artist: Kygo
+Song title: Freedom
+Preview song: https://p.scdn.co/mp3-preview/0847be334607b0c8ae097e5453d2e7f03536d29e?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Freedom
+==========================================================================
+==========================================================================
+Song #2
+Artist: Beyoncé
+Song title: Freedom (feat. Kendrick Lamar)
+Preview song: https://p.scdn.co/mp3-preview/fbe70f454ebeab5073a4db690b1c1bbfcd396811?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Lemonade
+==========================================================================
+==========================================================================
+Song #3
+Artist: George Michael
+Song title: Freedom! '90 - Remastered
+Preview song: https://p.scdn.co/mp3-preview/412a31c96267ab9b92c3903a0662ace4111ea70a?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Listen Without Prejudice / MTV Unplugged (Deluxe)
+==========================================================================
+==========================================================================
+Song #4
+Artist: Pharrell Williams
+Song title: Freedom
+Preview song: https://p.scdn.co/mp3-preview/fae292a3c010eea241a38e67a005fc92eacc2ed7?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Freedom
+==========================================================================
+==========================================================================
+Song #5
+Artist: Jesus Culture
+Song title: Freedom - Live
+Preview song: Song preview is N/A for this song.
+Album: Living With A Fire (Live)
+==========================================================================
+==========================================================================
+Song #6
+Artist: Beyoncé
+Song title: Freedom - Homecoming Live
+Preview song: https://p.scdn.co/mp3-preview/d2765486e5fe5133b4a9c35b044c6ab6c982b316?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: HOMECOMING: THE LIVE ALBUM
+==========================================================================
+==========================================================================
+Song #7
+Artist: Rage Against The Machine
+Song title: Freedom
+Preview song: https://p.scdn.co/mp3-preview/0bf16f87496965eca4c2a559525c627322c3c6c5?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Rage Against The Machine - XX (20th Anniversary Special Edition)
+==========================================================================
+==========================================================================
+Song #8
+Artist: Anthony Hamilton
+Song title: Freedom
+Preview song: Song preview is N/A for this song.
+Album: Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack
+==========================================================================
+==========================================================================
+Song #9
+Artist: Dierks Bentley
+Song title: Freedom
+Preview song: Song preview is N/A for this song.
+Album: Black
+==========================================================================
+==========================================================================
+Song #10
+Artist: Rachel Maree
+Song title: Freedom
+Preview song: https://p.scdn.co/mp3-preview/03786503e5dfc488fadf3e79a1e73730c86ab4a8?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Emerald Crush
+==========================================================================
+liri command: spotify-this-song
+==========================================================================
+Top 10 songs on Spotify with the name, Jurrasic5
+==========================================================================
+Song #1
+Artist: Todster
+Song title: Dinosaur Sounds in the Nocturnal Forest: Stegosaurus, Bronto Saurus, Mamanchisaurus, Raptors, Jungle, Jurrasic Sounds
+Preview song: https://p.scdn.co/mp3-preview/d2a61ec48d5b2f2d720fd4ad8336872c58ed0d58?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Jurrassic Sounds 1 - Dinosaur Noises: T-Rex, Raptors, Bronto & Stegosaurs, Prehistoric Atmosphere
+==========================================================================
+==========================================================================
+Song #2
+Artist: Jurrasic 5 (Prod. Bean One)
+Song title: Gotta Understand (Remix)
+Preview song: https://p.scdn.co/mp3-preview/f5a43591103abfacd8579dafad406054cb919393?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Iller Clothing Presents: Iller Essentials
+==========================================================================
+==========================================================================
+Song #3
+Artist: Cut Killer
+Song title: Jurrasic 5
+Preview song: https://p.scdn.co/mp3-preview/d1431d7f88b54a92dea41809e02e0e7979ea44da?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Radio Freestyle Vol. 2
+==========================================================================
+==========================================================================
+liri command: spotify-this-song
+Top 10 songs on Spotify with the name, Berner
+==========================================================================
+Song #1
+Artist: Berner
+Song title: El Chivo (feat. T3r Elemento)
+Preview song: https://p.scdn.co/mp3-preview/c5f249feae655ed6b88181c9b2478f02beb7b401?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: El Chivo
+==========================================================================
+==========================================================================
+Song #2
+Artist: Berner
+Song title: 20 Joints
+Preview song: https://p.scdn.co/mp3-preview/984c147bcaa68d935ce3e59f8ba96d440d29c000?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: 20 Joints - Single
+==========================================================================
+==========================================================================
+Song #3
+Artist: Berner
+Song title: Ayy (feat. YG & Logic)
+Preview song: https://p.scdn.co/mp3-preview/23416d4dcc211411d2928a415a0fae252c851d99?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Slimey Individualz
+==========================================================================
+==========================================================================
+Song #4
+Artist: Berner
+Song title: Paradise (feat. Wiz Khalifa)
+Preview song: https://p.scdn.co/mp3-preview/2ad18d65a0499e12e730f56e7930326f5b4e7f1f?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: The White Album
+==========================================================================
+==========================================================================
+Song #5
+Artist: Berner
+Song title: Wax Room (feat. Nipsey Hussle)
+Preview song: https://p.scdn.co/mp3-preview/e1a139b9863a63ec12e2cdbe8c6b6374d8f57b6a?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Drugstore Cowboy
+==========================================================================
+==========================================================================
+Song #6
+Artist: Berner
+Song title: Faded
+Preview song: https://p.scdn.co/mp3-preview/b3abbde708ef82147a4419213c5e2af92c031efe?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Prohibition
+==========================================================================
+==========================================================================
+Song #7
+Artist: Berner
+Song title: Xanax and Patron
+Preview song: https://p.scdn.co/mp3-preview/2e5fd8e7ad686bc107494e8e37f66e7b9eee9b9b?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Prohibition
+==========================================================================
+==========================================================================
+Song #9
+Artist: Berner
+Song title: Gangsta Shit (feat. Kokane & G Perico)
+Preview song: https://p.scdn.co/mp3-preview/733c755fccb3817410a0c2d6c93d317ab21d7a47?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Pheno Grigio
+==========================================================================
+==========================================================================
+Song #10
+Artist: Berner
+Song title: While Driving
+Preview song: https://p.scdn.co/mp3-preview/2a3b1f72a3c8a3dc640b5f67f694cb9711e6c773?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Los Meros
+==========================================================================
+==========================================================================
+Song #8
+Artist: Berner
+Song title: Candy
+Preview song: https://p.scdn.co/mp3-preview/8e385b70e74ae386a890c57a2394b8bb24c52a06?cid=aa3b9534c3524fe48eb42bd3f7a98b9d
+Album: Candy
+==========================================================================
