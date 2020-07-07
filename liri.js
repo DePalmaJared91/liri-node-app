@@ -153,186 +153,222 @@ request(
         }
     );
 }
+//get information reg specified song.
 
-
-
-
-
-
-
-
-
-
-
-let inquirer = require("inquirer");
-let moment = require("moment");
-moment().format();
-
-let axios = require("axios");
-
-var spotify = new Spotify(keys.spotify);
-
-
-inquirer
-    .prompt([
-        {
-            type: "input",
-            message: "What is your name?",
-            name: "username"
-
-        },
-        {
-            type: "list",
-            message: "What would you like to ask about: concerts, spotify songs, movies?",
-            choices: ["concert-this", "spotify-this-song", "movie-this", "do-what-it-says"],
-            name: "choice"
-        },
-    ])
-
-    .then(function(res) {
-        if (res.choice === "concert-this") {
-            console.log("\n================");
-            console.log('\nWelcome ${res.username}');
-            console.log("\n================");
-            inquirer
-            .prompt([
-                {
-                    type: "input",
-                    message: "What artist are you interested in?",
-                    name: "artist"
-                }
-             ]).then(function(result){
-                 let artist = result.artist;
-
-                 let queryUrl = "https://rest.bandsintown.com/artists/" + artists + "/events?app_id=codingbootcamp"
-
-                 if(result.artist == ""){
-                     console.log("Please, enter an artist");
-                    } else {
-                        axios.get(queryUrl).then(
-                            function(response) {
-                                for (let i = 0; i< response.length; i++) {
-                                    let date = moment(response.data[i].datetime).format('MM/DD/YYYY')
-                                    console.log("\n================");
-                                    console.log('Venue name: ${response.data[i].venue.name}');
-                                    console.log('Country: ${response.data[i].venue.country}');
-                                    console.log('Date: ${date}');
-                                    console.log("=================");
-                                }
-                                fs.appendFile("log.txt", '\nArtist: ${artist}', function (err){
-                                    if (err) {
-                                        console.log(err);
-                                    }
-                                    else {
-                                        console.log('Artist ${artist.toUpperCase()} added to log.txt file!');
-                                    }
-
-                                });
-                            })
-                        }
-                    })
-            } else if (res.choice === "spotify-this-song"){
-                console.log("\n=================");
-                console.log('\nWelcome ${res.username}');
-                console.log("\n=================");
-
-                inquirer
-                .prompt([
-                    {
-                        type: "input",
-                        message: "What track are you interested in?",
-                        name: "track"
-                    }
-                ])
-                .then(function (result){
-                    if (result.track == "") {
-                        result.track = "The Sign";
-                        spotify
-                        .search({ type: 'track', query: result.track})
-                        .then(function(response){
-                            console.log("\n=================");
-                            console.log("\n=================");
-                            console.log('Song: ${response.tracks.items[7].name}');
-                            console.log('Artist: ${response.tracks.items[7].album.artists[0].name}');
-                            console.log('Spotify Preview: ${response.tracks.items[7].albums.external_urls.spotify}');
-                            console.log('Album: ${response.tracks.items[7].album.name}');
-                            console.log('Release Year: ${response.tracks.items[7].album.release_date}');
-                            console.log('Preview: ${response.tracks.items[7].preview_url}');
-                            console.log("\n=================");
-
-                            fs.appendFile("log.txt", '\nSong: ${result.track}', function (err){
-                                if (err) {
-                                    console.log(err);
-                                }
-                                else{
-                                    console.log('Song ${result.track.toUpperCase()} added to log.txt file !');
-
-                                }
-                            });
-                        })
-                        .catch(function(err){
-                            console.log(err);
-                        });
-                    } else {
-                        spotify
-                        .search({ type: 'track', query: result.track})
-                        .then(function(response){
-                            console.log("\n=================");
-                            for (let i = 0; i < response.tracks.items.length; i++){
-                                console.log("\n=================");
-                                console.log('Song: ${response.tracks.items[i].name}');
-                                console.log('Artist: ${response.tracks.items[i].album.artists[0].name}');
-                                console.log('Spotify Preview: ${response.tracks.items[i].album.external_urls.spotify}');
-                                console.log('Album: ${response.tracks.items[i].album.name}');
-                                console.log('Release Year: ${response.tracks.items[i].album.release_date}');
-                                console.log('Preview: ${response.tracks.items[i].preview_url}');
-                                console.log("\n=================");
-                            }
-                            fs.appendFile ("log.txt", '\nSong: ${result.track}', function(err) {
-                                if (err) {
-                                    console.log(err);
-                                }
-                                else {
-                                    console.log('Song ${result.track.toUpperCase()} added to log.txt file!');
-                                }
-                            });
-                        })
-                        .catch(function(err){
-                            console.log(err);
-                        });
-                    }
-                })
-            } else if (res.choice === "do-what-it-says") {
-                fs.readFile("random.txt", "utf8", function (error, data){
-                    if (error) {
-                        return console.log(error);
-                    }
-                    spotify
-                    .search({type: 'track', query: data})
-                    .then(function(response){
-                        console.log("\n=================");
-                        for (let i = 0; i < response.tracks.items.length; i++) {
-                            console.log("\n=================");
-                            console.log('Song: ${response.tracks.items[i].name}');
-                            console.log('Artist: ${response.tracks.items[i].album.artists[0].name}');
-                            console.log('Spotify Preview: ${response.tracks.items[i].album.external_urls.spotify}');
-                            console.log('Album: ${response.tracks.items[i].album.name}');
-                            console.log('Release Year: ${response.tracks.items[i].album.release_date}');
-                            console.log('Preview: ${response.tracks.items[i].preview_url}');
-                            console.log("\n=================");
-                        }
-                        fs.appendFile("log.txt", '\nSong: ${data}', function (err){
-                            if (err){
-                                console.log(err)
-                            }
-                            else{
-                                console.log('Song ${data.toUpperCase()} Added to log.txt file!');
-                            }
-                        });
-                    })
-                })
-            }
-            else if 
-        }
+function getSongInfo(songName){
+    //For loop ensures that if song name is longer than 1 word then all the words in the song stay on the same line.
+    for (var i = 3; i < input.length; i++) {
+        songName = songName + "" + input[i];
     }
-    )
+    //console.log(songName);
+    //Line Break for log.txt file organization
+    logData(
+        "=========================================================================="
+    );
+    //log command to log.txt
+    logData("liri command: spotify-this-song");
+    //var spotify = new Spotify(keys.spotify);
+    var spotify = new Spotify({
+        id: process.env.SPOTIFY_ID,
+        secret: process.env.SPOTIFY_SECRET
+    });
+
+    //If no song is specified on CLI, show song info for "The Waiting" by the Mowgli's by default.
+    if(!songName) {
+        //If no song is specified, set the songName variable the "The Waiting"
+        songName = "The Waiting";
+    }
+
+    //Use the figlet npm package to convert songName text to art or drawing.
+    figlet(songName, function (err, data){
+        if (err) {
+            console.log("Something went wrong...");
+            console.dir(err);
+            return;
+        }
+        console.log(data);
+    });
+
+    //Use the Spotify package to search for a song/track. Set results limit to 10
+    spotify.search({ type: "track", query: songName, limit: 10 }, function(
+        err,
+        data
+    )   {
+        //If there is error log it.
+        if(err) {
+            return console.log("Error occured: " + err);
+        }
+
+        //JSON.stringify to print the data in string format.
+        // JSON.stringify argument of "2" to make the format pretty.
+        //console.log(JSON.stringify(data, null, 2));
+
+        //If no song is provided, then the app will default to "The Waiting" by Tom Petty.
+        if (songName === "The Waiting") {
+            //output default song info
+            var defaultSong =
+            //Output Artist
+            "Artist: " + 
+            data.tracks.items[5].artists[0].name +
+            "\r\n" +
+            //Output song's name
+            "Song title: " +
+           data.tracks.items[5].name +
+           "\r\n" +
+           //Output a preview link of song from Spotify
+           "Preview song: " +
+           data.tracks.items[5].preview_url +
+           "\r\n" +
+           //Output Album that song is from
+           "Album: " +
+           data.tracks.items[5].album.name +
+           "\r\n";
+
+           //Output Default song info to terminal
+
+          console.log(defaultSong);
+          console.log(addedToLogFile);
+          //Output default song info to log.txt file
+          logData(defaultSong);
+          logData(
+            "=========================================================================="
+            );
+        }
+
+        //If song name is provided, output first 10 songs with that name
+        else {
+            console.log("Top 10 songs on Spotify with the name," + songName);
+            logData("Top 10 songs on Spotify with the name, " + songName);
+            //Loop through the JSON data to display the top songs.
+            for (var i = 0; i < data.tracks.items.length; i++) {
+                var trackInfo = data.tracks.items[i];
+
+                //Create variable for song preview link. 
+                var previewSong = trackInfo.preview_url;
+                //If song preview is null (N/A), tell user it is (N/A)
+                if (previewSong === null) {
+                    previewSong = "Song preview is N/A for this song.";
+                }
+                //output the song result. 
+                var songResults =
+                //Line Break to keep log.txt file clean
+                "==========================================================================" +
+          "\r\n" +
+          //Display song number for each song. For example, the first song returned will be Song #1, etc.
+          "Song #" +
+          (i + 1) +
+          "\r\n" +
+          //Output artist
+          "Artist: " +
+          trackInfo.artists[0].name +
+          "\r\n" +
+          //Output song's name.
+          "Song title: " +
+          trackInfo.name +
+          "\r\n" +
+          //Output a preview link of song from Spotify.
+          "Preview song: " +
+          previewSong +
+          "\r\n" +
+          //Output the album that song is from.
+          "Album: " +
+          trackInfo.album.name +
+          "\r\n" +
+          //Line break to keep log.txt file clean and organized.
+          "==========================================================================";
+
+        //This will display song info.
+        console.log(songResults);
+        //Display song info in log.txt file.
+        logData(songResults);
+      }
+    }
+  });
+}
+
+//doWhatItSays function...
+//If the liriCommand is do-what-it-says, take the text inside of random.txt and then use it to run spotify-this-song for "I want it that way."
+function doWhatItSays() {
+    //this code reads from the random.txt file
+    //Important to include the utf8 parameter or code will provide stream data which is trash
+    //code stores the content of the reading inside the variable "data"
+    fs.readFile("random.txt", "utf8", function(error, data){
+        //If code experiences any errors it logs error to console
+        if (error) {
+            return console.log(error);
+        }
+        //we then print contents of data
+        //console.log(data);
+
+        //Then split by commas to make readable
+        var songdataArray = data.split(",");
+
+        //Re-display contents as array
+        //console.log(songdataArray);
+        //console.log(songdataArray[1]);
+        //Call the getSongInfo function to display the song info for "I want it that way."
+        getSongInfo(songdataArray[1]);
+    });
+}
+//Output  to a .txt file called log.txt
+function logData(logResults) {
+    //Append contents to file
+    //If file doesn;t exist it gets created on fly 
+    fs.appendFile("log.txt", logResults + "\r\n", function(err) {
+        if (err) {
+            console.log(err);
+        }
+
+        //If no error we will log Content added
+        else {
+            //console.log("Content Added!");
+        }
+    });
+}
+
+//Function to show command line help.
+
+function showHelp() {
+    //use figlet npm to convert text to art/drawing
+    figlet("LIRI help", function(err, data) {
+        if(err) {
+            console.log("Something went wrong...");
+            console.dir(err);
+            return;
+        }
+        console.log(data);
+    });
+    var helpInfo = "Usage: node liri.js <command> [arguments]";
+    var helpColumns = [
+        {
+            Command: "movie-this [movie_name]",
+            Description:
+            "Shows information about the specified movie. If no movie is specified, Mr. Nobody is displayed by default."
+        },
+        {
+            Command:"spotify-this-song [song_name]",
+            Description:
+            "Shows the top 10 songs on Spotify for the song, 'I want it that way.'"
+        }
+    ];
+    console.log(
+        "=================================================================================================="
+      );
+      console.log(helpInfo);
+      console.log(
+        "=================================================================================================="
+      );
+      console.log(helpColumns);
+    }
+
+
+
+
+
+
+
+
+
+
+
+

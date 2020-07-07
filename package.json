@@ -1,7 +1,7 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "first node app",
   "main": "keys.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/DePalmaJared91/liri-node-app#readme",
   "dependencies": {
-    "node-spotify-api": "^1.1.1"
+    "api": "^2.1.6",
+    "dotenv": "^8.2.0",
+    "figlet": "^1.4.0",
+    "fs": "0.0.1-security",
+    "node-spotify-api": "^1.1.1",
+    "omdb": "^0.8.0",
+    "request": "^2.88.2"
   }
 }

@@ -1,0 +1,12 @@
+=======================================================================================================
+liri command: movie-thisScarface
+=======================================================================================================
+Title: Scarface
+Year movie was released: 1983
+IMDB movie rating (out of 10): 8.3
+Rotten Tomatoes Rating (out of 100%): 81%
+Filmed in: USA
+Language: English, Spanish
+Movie plot: In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.
+Actors: Al Pacino, Steven Bauer, Michelle Pfeiffer, Mary Elizabeth Mastrantonio
+=======================================================================================================
